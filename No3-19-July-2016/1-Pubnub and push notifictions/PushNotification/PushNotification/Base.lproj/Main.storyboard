@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="x58-6R-sWh">
+                                <rect key="frame" x="23" y="299" width="555" height="281"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tOI-lU-wOa">
+                                <rect key="frame" x="277" y="261" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="GoV-mX-lLg"/>
+                                </constraints>
+                                <state key="normal" title="Send"/>
+                                <connections>
+                                    <action selector="onSendMessage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zKc-UD-Js5"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="B2L-xd-pu4">
+                                <rect key="frame" x="20" y="20" width="560" height="231"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="231" id="Ess-sq-J0R"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="B2L-xd-pu4" secondAttribute="leading" id="57e-L0-76l"/>
+                            <constraint firstItem="tOI-lU-wOa" firstAttribute="top" secondItem="B2L-xd-pu4" secondAttribute="bottom" constant="10" id="AP9-oH-A2R"/>
+                            <constraint firstItem="B2L-xd-pu4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Aue-ne-LUn"/>
+                            <constraint firstItem="tOI-lU-wOa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BK4-TR-71X"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="x58-6R-sWh" secondAttribute="trailing" constant="2" id="GGf-Hl-90U"/>
+                            <constraint firstItem="x58-6R-sWh" firstAttribute="top" secondItem="tOI-lU-wOa" secondAttribute="bottom" constant="8" id="VXN-Yu-l21"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="B2L-xd-pu4" secondAttribute="trailing" id="bRA-KV-rR2"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="x58-6R-sWh" secondAttribute="bottom" constant="20" id="pIH-di-DAQ"/>
+                            <constraint firstItem="x58-6R-sWh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="3" id="w4B-7a-2Fv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="receivedMessage" destination="x58-6R-sWh" id="O7i-lu-aWS"/>
+                        <outlet property="sendMessage" destination="B2L-xd-pu4" id="rDK-Id-4cK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="340" y="387"/>
+        </scene>
+    </scenes>
+</document>
